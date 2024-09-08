@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de sorteio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><h3 id="numeros-sorteados">Objetivo do jogo: não zerar o cache!<br> Aqui aparecerá os números sorteados</h3></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="fundo_video">
+        <video src="video.mp4" autoplay loop muted></video> 
+        <div class="overlay"></div>
+    </div>
+    <section>
+        <div id="caixa-aposta">
+            <h1 id="resultado">Faça sua aposta!</h1>
+            <div class="box box1">
+                <label>Cache: <b>R$1000.00</b></label>
+            </div>
+            <div class="box">
+                <label for="aposta">Valor da Aposta: R$</label>
+                <input type="number" id="aposta" min="1" step="0.01" required> 
+            </div>
+            <div class="box">
+                <label for="numero1">Número 1:</label>
+                <input type="number" id="numero1" min="1" max="10" required>
+            </div>
+            <div class="box">
+                <label for="numero2">Número 2:</label>
+                <input type="number" id="numero2" min="1" max="10" required>
+            </div>
+            <div class="box">
+                <label for="numero3">Número 3:</label>
+                <input type="number" id="numero3" min="1" max="10" required>
+            </div>
+            <button onclick="rolar()">Apostar</button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

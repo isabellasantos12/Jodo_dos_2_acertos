@@ -1,0 +1,162 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; 
+    height: 100vh;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 10px 0; 
+    width: 100%;
+    background-image: linear-gradient(100deg, #1a067e, #db0165);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+#numeros-sorteados {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff; 
+}
+
+/* VIDEO */
+.fundo_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+.fundo_video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.644);
+    pointer-events: none; 
+}
+
+/* CAIXA SORTEIO */
+#caixa-aposta {
+    backdrop-filter: blur(20px);
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid #e6ffff8a;
+    width: 90%; 
+    max-width: 500px; 
+    margin: 20px auto; 
+    background-image: linear-gradient(100deg, #1a067eaf, #db0167a6);
+    padding: 20px;
+    box-sizing: border-box; 
+    position: relative;
+    margin-top: 90px; 
+}
+#resultado {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ffffff; 
+}
+.box { 
+    margin: 3px 0 18px 0;   
+    background-color: #d6f7f779;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-size: 18px;
+    color: #ffffff;
+}
+input {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    color: #db0165;
+}
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color:  #db0165; 
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+    background-color: #a10c52; 
+    transform: scale(1.05);
+}
+button:active {
+    transform: scale(0.95);
+}
+b {
+    color: #facaf8;
+}
+
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #numeros-sorteados {
+        font-size: 16px;
+    }
+    #caixa-aposta {
+        width: 95%;
+        margin-top: 70px; 
+        padding: 15px; 
+    }
+    .box {
+        margin: 5px 0; 
+    }
+    input {
+        font-size: 18px;
+        padding: 8px;
+    }
+    button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+@media (max-width: 480px) {
+    #numeros-sorteados {
+        font-size: 14px;
+    }
+    #caixa-aposta {
+        padding: 10px;
+    }
+    input {
+        font-size: 16px;
+        padding: 6px;
+    }
+    button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
